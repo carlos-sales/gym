@@ -1,3 +1,213 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.detail-box
+{
+    background: #ffffff;
+    padding: 22px 28px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(55, 65, 81, 0.08);
+    max-width: 600px;
+    margin: 20px auto;
+    display: grid;
+    gap: 14px;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+.detail-box p
+{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #1f2937;
+}
+
+.title-detail-content
+{
+    min-width: 160px;
+    font-weight: 600;
+    color: #374151;
+    text-transform: none;
+    letter-spacing: 0.2px;
+}
+
+.div-btn
+{
+    text-align: end;
+    margin: 15px;
+}
+
+
+.btn
+{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms;
+}
+
+.btn + .btn
+{
+    margin-left: 10px;
+}
+
+.btn:focus { outline: 3px solid rgba(31,122,237,0.18); outline-offset: 2px; }
+
+
+.btn-view
+{
+    color: var(--accent);
+    background: rgba(31,122,237,0.08);
+}
+
+.btn-view:hover { transform: translateY(-2px); }
+
+.btn-edit
+{
+    color: var(--accent-2);
+    background: rgba(11,94,215,0.06);
+}
+
+.btn-edit:hover { transform: translateY(-2px); }
+
+.btn-delete
+{
+    color: var(--danger);
+    background: rgba(224,49,49,0.06);
+}
+
+.btn-delete:hover { transform: translateY(-2px); }
+
+.table-container
+{
+    padding: 10px 21px;
+}
+
+table
+{
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    min-width: 320px;
+}
+
+.table thead
+{
+    background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(245,247,250,0.6));
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+}
+
+.table thead th
+{
+    text-align: left;
+    padding: var(--table-padding);
+    font-size: 0.92rem;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    border-bottom: 1px solid rgba(15,23,42,0.06);
+}
+
+.table tbody tr
+{
+    transition: background-color 160ms ease, transform 120ms ease;
+}
+
+.table tbody tr:nth-child(even)
+{
+    background: var(--stripe);
+}
+
+.table tbody tr:hover
+{
+    background: rgba(31,122,237,0.05);
+    transform: translateY(-1px);
+}
+
+
+.table td
+{
+    padding: 12px 18px;
+    font-size: 0.95rem;
+    color: #101827;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(15,23,42,0.04);
+}
+
+form
+{
+    background: #ffffff;
+    padding: 26px 32px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(55, 65, 81, 0.08);
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+}
+
+.form-label
+{
+    display: block;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+    font-size: 0.92rem;
+}
+
+.form-input
+{
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    background: #f9fafb;
+    transition: border-color 160ms ease, box-shadow 160ms ease, background-color 180ms ease;
+    color: #0f172a;
+}
+
+.form-input:hover
+{
+    background: #ffffff;
+    border-color: rgba(55, 125, 255, 0.5);
+}
+
+.form-input:focus
+{
+    outline: none;
+    background: #fff;
+    border-color: #1f7aed;
+    box-shadow: 0 0 0 3px rgba(31, 122, 237, 0.15);
+}
+
+.form-error
+{
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #d00000;
+    font-weight: 500;
+}
+
+.required-field
+{
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-style: italic;
+}

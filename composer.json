@@ -12,12 +12,14 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
+        "stancl/tenancy": "^3.9",
         "tightenco/ziggy": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "laravel/pint": "^1.0",
         "laravel/sail": "^1.18",
+        "lucascudo/laravel-pt-br-localization": "^3.0",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^7.0",
         "pestphp/pest": "^2.0",
@@ -49,7 +51,8 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "dev": "mpx concurrently \"php artisan serve\" \"npm run dev\""
     },
     "extra": {
         "laravel": {
